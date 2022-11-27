@@ -15,4 +15,4 @@ const LogoutButton = () => {
     </div>
   ) : null;
 };
- export default LogoutButton;
+export default LogoutButton;

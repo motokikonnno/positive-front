@@ -1,0 +1,80 @@
+.layout {
+  margin: 64px auto 0 auto;
+  width: 92%;
+}
+
+.heroContainer {
+  display: flex;
+  margin-bottom: 113px;
+  gap: 64px;
+}
+
+.heroLeftContainer {
+  flex: 1;
+  padding-top: 8%;
+}
+
+.heroRightContainer {
+  flex: 1;
+}
+
+.heroTitle {
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.heroDescription {
+  margin-top: 20px;
+  font-size: 24px;
+  line-height: 38px;
+}
+
+.startButton {
+  text-align: center;
+  margin-top: 26px;
+  padding: 10px 0;
+  width: 30%;
+  border-radius: 6px;
+  font-size: 22px;
+  color: white;
+  background-color: #ff1493;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+    filter: brightness(110%);
+    transition: all .3s;
+  }
+}
+
+.introduceContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.introduceConclusion {
+  flex: 1;
+  text-align: justify;
+}
+
+.introduceImage {
+  flex: 1;
+  text-align: center;
+}
+
+.introduceTitle {
+  font-size: 3.2rem;
+  font-weight: bold;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.introduceDescription {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
