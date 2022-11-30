@@ -1,19 +1,14 @@
 .footerContainer {
   display: flex;
-  background-color: #f5f5f5;
   flex-direction: row-reverse;
-  gap: 31%;
   padding: 26px 0;
+  background-color: #f5f5f5;
 }
 
 .text {
   align-self: flex-end;
+  width: 49%;
   color: #293039;
-}
-
-.symbol {
-  display: inline-block;
-  font-size: 14px;
 }
 
 .snsContainer {

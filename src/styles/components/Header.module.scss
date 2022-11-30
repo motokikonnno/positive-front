@@ -1,3 +1,5 @@
+@import "/src/styles/variables.scss";
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -27,6 +29,9 @@
     filter: brightness(110%);
     transition: all 0.3s;
   }
+  @include mq(md) {
+    display: none;
+  }
 }
 
 .logo {
@@ -48,4 +53,11 @@
   color: white;
   background-color: #ff1493;
   cursor: pointer;
+}
+
+.menuIcon {
+  display: none;
+  @include mq(md) {
+    display: block;
+  }
 }

@@ -16,6 +16,9 @@ const Header = () => {
       <div className={styles.nav}>
         <div className={styles.navItem}>ログイン</div>
         <div className={styles.signUp}>新規登録</div>
+        <div className={styles.menuIcon}>
+          <Image src="/icon/bars.svg" width={35} height={35} alt="メニューバー" />
+        </div>
       </div>
     </div>
   )
