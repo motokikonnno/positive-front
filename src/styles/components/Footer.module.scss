@@ -1,17 +1,32 @@
+@import "/src/styles/variables.scss";
+
 .footerContainer {
   display: flex;
   flex-direction: row-reverse;
   padding: 26px 0;
   background-color: #f5f5f5;
+  @include mq(md) {
+    display: block;
+  }
 }
 
 .text {
   align-self: flex-end;
   width: 49%;
   color: #293039;
+  @include mq(md) {
+    text-align: center;
+    width: auto;
+    font-size: 12px;
+  }
 }
 
 .snsContainer {
   display: flex;
   gap: 20px;
+  @include mq(md) {
+    justify-content: center;
+    margin-bottom: 25px;
+    gap: 15px;
+  }
 }
