@@ -1,3 +1,5 @@
+@import "/src/styles/variables.scss";
+
 .layout {
   margin: 64px auto 0 auto;
   width: 92%;
@@ -7,26 +9,48 @@
   display: flex;
   margin-bottom: 113px;
   gap: 64px;
+  @include mq(md) {
+    flex-direction: column-reverse;
+    margin-bottom: 90px;
+    gap: 0;
+  }
 }
 
 .heroLeftContainer {
   flex: 1;
   padding-top: 8%;
+  @include mq(md) {
+    padding-top: 0;
+  }
 }
 
 .heroRightContainer {
   flex: 1;
+  @include mq(md) {
+    margin: 0 auto;
+    width: 50%;
+  }
 }
 
 .heroTitle {
   font-size: 64px;
   font-weight: bold;
+  @include mq(md) {
+    text-align: center;
+    font-size: 5vh;
+  }
 }
 
 .heroDescription {
   margin-top: 20px;
   font-size: 24px;
   line-height: 38px;
+  @include mq(md) {
+    margin-top: 10px;
+    font-size: 3vh;
+    line-height: 32px;
+    text-align: justify;
+  }
 }
 
 .startButton {
@@ -45,16 +69,26 @@
     filter: brightness(110%);
     transition: all .3s;
   }
+  @include mq(md) {
+    margin: 25px auto 0;
+    width: 75%;
+  }
 }
 
 .introduceContainer {
   display: flex;
   align-items: center;
   margin-top: 20px;
+  @include mq(md) {
+    flex-direction: column;
+  }
 }
 
 .reverse {
   flex-direction: row-reverse;
+  @include mq(md) {
+    flex-direction: column;
+  }
 }
 
 .introduceConclusion {
@@ -65,6 +99,10 @@
 .introduceImage {
   flex: 1;
   text-align: center;
+  @include mq(md) {
+    margin-top: 10px;
+    width: 60%;
+  }
 }
 
 .introduceTitle {
@@ -72,9 +110,15 @@
   font-weight: bold;
   line-height: 1.6;
   margin-bottom: 8px;
+  @include mq(sm) {
+    font-size: 2.2rem;
+  }
 }
 
 .introduceDescription {
   font-size: 1.6rem;
   line-height: 1.6;
+  @include mq(sm) {
+    font-size: 1.6rem;
+  }
 }
