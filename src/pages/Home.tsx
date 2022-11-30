@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Header from "../components/Header";
 import Image from "next/image";
 import styles from "../styles/pages/Home.module.scss";
+import Footer from "../components/Footer";
 
 const Home: NextPage = () => {
   return (
@@ -80,6 +81,7 @@ const Home: NextPage = () => {
             </div>
           </div>
       </div>
+      <Footer />
     </>
   );
 };
