@@ -1,0 +1,52 @@
+@import "/src/styles/variables.scss";
+
+.container {
+  margin: 0 auto 15px;
+  width: 70%;
+}
+
+.questionContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: #eeeeee;
+}
+
+.questionIcon {
+  display: inline-block;
+  text-align: center;
+  margin-right: 20px;
+  width: 37.5px;
+  min-width: 37.5px;
+  color: #ffff;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.plusIcon,
+.minusIcon {
+  cursor: pointer;
+}
+
+.toggleIcon,
+.toggleAnswer {
+  display: none;
+}
+
+.answerIcon {
+  @extend .questionIcon;
+  align-self: flex-start;
+  background-color: #ff5192;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.answerContainer {
+  display: flex;
+  align-items: center;
+  padding: 20px 20px 5px;
+  font-size: 22px;
+}

@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/components/Header.module.scss";
 
-const Header = () => {
+export const Header = () => {
   return (
     <div className={styles.container}>
       <div className={styles.nav}>
-        <Link href="/Home">
+        <Link href="/">
           <div className={styles.logo}>
             <Image src="/logo.png" width={50} height={50} alt="ロゴ画像" />
           </div>
@@ -39,5 +39,3 @@ const Header = () => {
     </div>
   );
 };
-
-export default Header;

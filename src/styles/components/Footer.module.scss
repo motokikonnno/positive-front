@@ -14,7 +14,7 @@
 
 .text {
   align-self: flex-end;
-  width: 49%;
+  width: 48%;
   color: #293039;
   @include mq(md) {
     text-align: center;
@@ -25,10 +25,12 @@
 
 .snsContainer {
   display: flex;
+  margin-right: 25px;
   gap: 20px;
   @include mq(md) {
     justify-content: center;
     margin-bottom: 25px;
+    margin-right: 0;
     gap: 15px;
   }
 }

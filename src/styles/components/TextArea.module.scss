@@ -1,0 +1,24 @@
+@import "/src/styles/variables.scss";
+
+.textarea {
+  display: block;
+  margin: 0 auto;
+  padding:10px 15px;
+  border-radius:10px;
+  font-size: 29px;
+  transition:.3s ease;
+  color:#868283;
+  background-color: #ffff;
+  
+  &[name=textarea]{
+    width: 80%;
+    margin-bottom:50px;
+    border:2px solid #868283;
+    &:placeholder-shown{
+      border:2px solid #EAE4DA;
+    }
+    &::placeholder{
+      color:#A3A5AA;
+    }
+  }
+}
