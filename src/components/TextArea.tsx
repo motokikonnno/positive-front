@@ -11,7 +11,7 @@ export const TextArea: React.FC<TextAreaProps> = ({ value, handleChange }) => {
       value={value}
       onChange={(e) => handleChange(e.target.value)}
       required
-      maxLength={46}
+      maxLength={50}
       name="textarea"
       placeholder="ポジティブなことを書こう！"
       className={styles.textarea}

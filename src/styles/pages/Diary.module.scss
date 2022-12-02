@@ -2,17 +2,40 @@
 
 .title {
   text-align: center;
-  margin-top: 60px;
+  margin-bottom: 40px;
   font-size: 46px;
   font-weight: bold;
 }
 
 .background {
   margin: 40px auto 0;
-  padding: 100px;
+  padding: 70px;
   width: 80%;
-  height: 1000px;
   border-radius: 30px;
-  background-color: #FFF0F5;
-  box-shadow: 0 0 10px rgba(0,0,0,.3);
+  background-color: #fff0f5;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.addButton {
+  text-align: center;
+  margin: 40px auto 60px;
+  padding: 10px 0;
+  width: 40%;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 8px;
+  color: #ffff;
+  background-color: #ff1493;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+    filter: brightness(110%);
+    transition: all 0.3s;
+  }
+}
+
+.diaryItem {
+  background-image: url(/public/icon/heart.svg);
+  background-size: 50%;
 }
