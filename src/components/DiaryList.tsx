@@ -4,13 +4,12 @@ import styles from "../styles/components/DiaryList.module.scss";
 
 type diaryListProps = {
   diary: string;
-  index: number;
 };
 
-export const DiaryList: FC<diaryListProps> = ({ diary, index }) => {
+export const DiaryList: FC<diaryListProps> = ({ diary }) => {
 
   const handleDelete = () => {
-    
+
   }
 
   return (

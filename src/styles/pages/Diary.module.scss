@@ -17,9 +17,10 @@
 }
 
 .addButton {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   margin: 8% auto 60px;
-  padding: 10px 0;
+  padding: 13px 0;
   width: 40%;
   font-size: 24px;
   font-weight: bold;
@@ -50,4 +51,30 @@
     transition: all 0.2s;
     cursor: pointer;
   }
+}
+
+.textAreaContainer {
+  margin: 60px;
+  width: 500px;
+}
+
+.closeIcon {
+  margin: 15px 15px 0 auto;
+  width: 30px;
+
+  &:hover {
+    opacity: 0.6;
+    filter: brightness(110%);
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+}
+
+.saveButton {
+  @extend .addButton;
+  width: 20%;
+}
+
+.nonStyle {
+  display: none;
 }

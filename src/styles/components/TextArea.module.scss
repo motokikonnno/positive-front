@@ -9,9 +9,9 @@
   transition:.3s ease;
   color:#868283;
   background-color: #ffff;
-  
+
   &[name=textarea]{
-    width: 80%;
+    width: 100%;
     border:2px solid #868283;
     &:placeholder-shown{
       border:2px solid #EAE4DA;
