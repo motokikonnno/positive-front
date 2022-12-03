@@ -23,7 +23,7 @@ const Diary: NextPage = () => {
     <Layout>
       <div className={styles.background}>
         <h2 className={styles.title}>ポジティブ日記</h2>
-        <TextArea value={value} handleChange={handleChange} />
+        {/* <TextArea value={value} handleChange={handleChange} /> */}
         <div className={styles.addButton} onClick={createDiary}>
           追加
         </div>
@@ -31,6 +31,15 @@ const Diary: NextPage = () => {
           return <DiaryList diary={diary} index={index} key={diary} />;
         })}
       </div>
+      <div className={styles.advise}>
+        {/* <div className={styles.questionIcon}> */}
+      
+          <Image src="/icon/question.svg" width={25} height={25} alt="クエッションマークの画像" className={styles.questionIcon} />
+       
+        {/* </div> */}
+        
+        ヘルプ
+        </div>
     </Layout>
   );
 };
