@@ -42,7 +42,7 @@
 
 .title {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   font-size: 46px;
   font-weight: bold;
 }
@@ -50,11 +50,13 @@
 .petImage {
   margin: 0 auto 60px;
   width: 50%;
+  max-width: 515px;
   animation-name: swing;
-  animation-duration: 0.5s;
+  animation-duration: 3s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  will-change: transform;
 }
 
 .addButton {
@@ -75,4 +77,29 @@
     transition: all 0.3s;
     cursor: pointer;
   }
+}
+
+.modalContainer {
+  padding: 0 50px 50px;
+}
+
+.closeIcon {
+  margin: 15px 15px 0 auto;
+  width: 30px;
+
+  &:hover {
+    opacity: 0.6;
+    filter: brightness(110%);
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+}
+
+.resultText {
+  font-size: 17px;
+  color: #FFCC66;
+}
+
+.resultImage {
+  text-align: center;
 }

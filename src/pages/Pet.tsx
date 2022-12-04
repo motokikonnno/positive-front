@@ -21,24 +21,34 @@ const Pet: NextPage = () => {
       <div className={styles.background}>
         <h1 className={styles.title}>ペット</h1>
         <div className={styles.petImage}>
-          <Image
-            src="/negativePet.png"
-            width={500}
-            height={500}
-            alt="ペットの画像"
-          />
+          <Image src="/hut.png" width={500} height={500} alt="小屋の画像" />
         </div>
         <div className={styles.addButton} onClick={handleRandom}>
           エサをあげる
         </div>
         {isVisible === true ? (
           <Modal isVisible={isVisible} handleClose={handleClose}>
-            <Image
-              src="/positivePet.png"
-              width={100}
-              height={100}
-              alt="ポジティブペットの画像"
-            />
+            <div className={styles.closeIcon} onClick={handleClose}>
+              <Image
+                src="/icon/xmark.svg"
+                width={30}
+                height={30}
+                alt="閉じるアイコン"
+              />
+            </div>
+            <div className={styles.modalContainer}>
+              <div className={styles.resultText}>
+                ポジティブポイントを38ポイント獲得しました！
+              </div>
+              <div className={styles.resultImage}>
+                <Image
+                  src="/positivePet.png"
+                  width={300}
+                  height={300}
+                  alt="ポジティブペットの画像"
+                />
+              </div>
+            </div>
           </Modal>
         ) : (
           ""
