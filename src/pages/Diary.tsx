@@ -29,7 +29,7 @@ const Diary: NextPage = () => {
   return (
     <Layout>
       <div className={styles.background}>
-        <h2 className={styles.title}>ポジティブ日記</h2>
+        <h1 className={styles.title}>ポジティブ日記</h1>
         <div className={styles.addButton} onClick={handleClose}>
           <Image
             src="/icon/plus-white.svg"
