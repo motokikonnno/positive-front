@@ -8,15 +8,11 @@ type diaryListProps = {
 
 export const DiaryList: FC<diaryListProps> = ({ diary }) => {
 
-  const handleDelete = () => {
-
-  }
-
   return (
     <div className={diary.length === 0 ? styles.nonStyle : ""}>
       <div className={styles.container}>
         <div className={styles.text}>{diary}</div>
-        <div className={styles.xmarkIcon} onClick={handleDelete} >
+        <div className={styles.xmarkIcon}>
           <Image
             src="/icon/xmark.svg"
             width={40}
