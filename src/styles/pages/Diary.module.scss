@@ -78,3 +78,45 @@
 .nonStyle {
   display: none;
 }
+
+.buttonContainer {
+  display: flex;
+}
+
+.confirmButton {
+  display: flex;
+  justify-content: center;
+  margin: 8% auto 0;
+  padding: 10px 0;
+  width: 30%;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 8px;
+  color: #ffff;
+  background-color: #ff1493;
+
+  &:hover {
+    opacity: 0.6;
+    filter: brightness(110%);
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+}
+
+.confirmContainer {
+  padding: 40px;
+  width: 500px;
+}
+
+.saveText {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.getPointText {
+  text-align: center;
+  margin-top: 10px;
+  color: #ffcc66;
+  font-size: 18px;
+}

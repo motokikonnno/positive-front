@@ -102,3 +102,8 @@
 .resultImage {
   text-align: center;
 }
+
+.confirmButton {
+  @extend .addButton;
+  margin: 8% auto 0;
+}

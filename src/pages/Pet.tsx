@@ -48,6 +48,7 @@ const Pet: NextPage = () => {
                   alt="ポジティブペットの画像"
                 />
               </div>
+              <div className={styles.confirmButton} onClick={handleClose}>OK</div>
             </div>
           </Modal>
         ) : (

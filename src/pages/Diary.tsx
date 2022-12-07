@@ -10,7 +10,8 @@ import styles from "../styles/pages/Diary.module.scss";
 const Diary: NextPage = () => {
   const [value, setValue] = useState<string>("");
   const [diaries, setDiary] = useState([""]);
-  const [isVisible, setVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleChange = (e: string) => {
     setValue(e);
@@ -23,7 +24,11 @@ const Diary: NextPage = () => {
   };
 
   const handleClose = () => {
-    setVisible(!isVisible);
+    setIsVisible(!isVisible);
+  };
+
+  const handleSave = () => {
+    setIsOpen(!isOpen);
   };
 
   return (
@@ -62,11 +67,27 @@ const Diary: NextPage = () => {
           return <DiaryList diary={diary} key={diary} />;
         })}
         {diaries.length !== 1 ? (
-          <div className={styles.saveButton}>保存</div>
+          <div className={styles.saveButton} onClick={handleSave}>
+            保存
+          </div>
         ) : (
           ""
         )}
       </div>
+      {isOpen ? (
+        <Modal isVisible={isOpen} handleClose={handleSave}>
+          <div className={styles.confirmContainer}>
+            <div className={styles.saveText}>保存しますか？</div>
+            <div className={styles.getPointText}>30pt獲得できます</div>
+            <div className={styles.buttonContainer}>
+              <div className={styles.confirmButton}>はい</div>
+              <div className={styles.confirmButton} onClick={handleSave}>戻る</div>
+            </div>
+          </div>
+        </Modal>
+      ) : (
+        ""
+      )}
       <div className={styles.advise}>
         <Image
           src="/icon/question.svg"

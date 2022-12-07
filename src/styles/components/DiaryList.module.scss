@@ -29,10 +29,20 @@
 }
 
 .xmarkIcon {
+  position: relative;
+
   &:hover {
-    opacity: 0.6;
-    filter: brightness(110%);
-    transition: all 0.2s;
     cursor: pointer;
+  }
+
+  &::before {
+    position: absolute;
+    top: 5px;
+    left: -120px;
+    content: "10pt獲得";
+    font-size: 20px;
+    color: #FFCC66;
+    white-space: nowrap;
+    pointer-events: none;
   }
 }
