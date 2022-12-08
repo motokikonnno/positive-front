@@ -11,7 +11,22 @@
 
 .title {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   font-size: 46px;
   font-weight: bold;
+}
+
+.InputSearchContainer {
+  display: flex;
+  margin-bottom: 30px;
+  // width: 45%;
+}
+
+.searchButton {
+  width: 74px;
+  height: 56px;
+  padding: 20px;
+  border-radius: 6px;
+  background-color: #ffff;
+  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.06);
 }

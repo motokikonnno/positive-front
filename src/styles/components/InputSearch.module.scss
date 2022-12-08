@@ -1,0 +1,35 @@
+@import "/src/styles/variables.scss";
+
+.inputWrap {
+  position: relative;
+  height: fit-content;
+}
+
+.inputElement {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-content: center;
+  width: 36px;
+  height: 56px;
+}
+
+.inputSearch {
+  width: 500px;
+  height: 56px;
+  padding-left: 36px;
+  border: 1px solid #DDDDDD;
+  border-radius: 6px;
+  background-color: #ffff;
+}
+
+.inputSearch::placeholder {
+  color: #DDDDDD;
+}
+
+.searchFormWrap {
+  // display: flex;
+  // gap: 10px;
+  // width: 100%;
+}

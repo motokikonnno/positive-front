@@ -1,14 +1,25 @@
 import type { NextPage } from "next";
-import { useState } from "react";
+import { useState, useCallback } from "react";
+import { InputSearch } from "../components/InputSearch";
 import { Layout } from "../components/Layout";
 import { PresentList } from "../components/PresentList";
 import styles from "../styles/pages/Present.module.scss";
 
 const Present: NextPage = () => {
+  const [SearchInputText, setSearchInputText] = useState("");
+
+  const handleChange = useCallback((e: string) => {
+    setSearchInputText(e);
+  }, [SearchInputText]);
+
   return (
     <Layout>
       <div className={styles.background}>
         <h1 className={styles.title}>プレゼントを贈る</h1>
+        <div className={styles.InputSearchContainer}>
+          <InputSearch handleChange={handleChange} searchInputText={SearchInputText} />
+          <div className={styles.searchButton}>検索</div>
+        </div>
         {Peoples.map((people) => {
           return <PresentList people={people} key={people.name} />;
         })}
