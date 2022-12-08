@@ -2,19 +2,19 @@ import type { NextPage } from "next";
 import { Layout } from "../components/Layout";
 import styles from "../styles/pages/Pet.module.scss";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { Modal } from "../components/Modal";
 
 const Pet: NextPage = () => {
   const [isVisible, setVisible] = useState(false);
 
-  const handleClose = () => {
+  const handleClose = useCallback(() => {
     setVisible(!isVisible);
-  };
+  }, [isVisible]);
 
-  const handleRandom = () => {
+  const handleRandom = useCallback(() => {
     handleClose();
-  };
+  }, [isVisible]);
 
   return (
     <Layout>

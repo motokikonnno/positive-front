@@ -1,4 +1,4 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import Image from "next/image";
 import styles from "../styles/components/DiaryList.module.scss";
 
@@ -6,8 +6,8 @@ type diaryListProps = {
   diary: string;
 };
 
-export const DiaryList: FC<diaryListProps> = ({ diary }) => {
-
+// eslint-disable-next-line react/display-name
+export const DiaryList: FC<diaryListProps> = React.memo(({ diary }) => {
   return (
     <div className={diary.length === 0 ? styles.nonStyle : ""}>
       <div className={styles.container}>
@@ -23,4 +23,4 @@ export const DiaryList: FC<diaryListProps> = ({ diary }) => {
       </div>
     </div>
   );
-};
+});

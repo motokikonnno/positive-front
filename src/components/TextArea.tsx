@@ -1,11 +1,13 @@
 import styles from "../styles/components/TextArea.module.scss";
+import React from "react";
 
 type TextAreaProps = {
   value: string
   handleChange: (value: string) => void;
 };
 
-export const TextArea: React.FC<TextAreaProps> = ({ value, handleChange }) => {
+// eslint-disable-next-line react/display-name
+export const TextArea: React.FC<TextAreaProps> = React.memo(({ value, handleChange }) => {
   return (
     <textarea
       value={value}
@@ -17,4 +19,4 @@ export const TextArea: React.FC<TextAreaProps> = ({ value, handleChange }) => {
       className={styles.textarea}
     />
   );
-};
+});

@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/components/Header.module.scss";
+import React from "react";
 
-export const Header = () => {
+// eslint-disable-next-line react/display-name
+export const Header = React.memo(() => {
   return (
     <div className={styles.container}>
       <div className={styles.nav}>
@@ -38,4 +40,4 @@ export const Header = () => {
       </div>
     </div>
   );
-};
+});

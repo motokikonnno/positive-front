@@ -3,13 +3,14 @@ import Image from "next/image";
 import styles from "../../styles/components/pages/Home.module.scss";
 import { Layout } from "../Layout";
 import { Qa } from "../Qa";
-import { FC } from "react";
+import React, { FC } from "react";
 
 type HomeProps = {
   qaContent: Question[];
 };
 
-export const Home: FC<HomeProps> = ({ qaContent }) => {
+// eslint-disable-next-line react/display-name
+export const Home: FC<HomeProps> = React.memo(({ qaContent }) => {
   return (
     <Layout>
       <div className={styles.layout}>
@@ -91,4 +92,4 @@ export const Home: FC<HomeProps> = ({ qaContent }) => {
       })}
     </Layout>
   );
-};
+});

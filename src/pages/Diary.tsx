@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { DiaryList } from "../components/DiaryList";
 import { Layout } from "../components/Layout";
 import { Modal } from "../components/Modal";
@@ -13,23 +13,23 @@ const Diary: NextPage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleChange = (e: string) => {
+  const handleChange = useCallback((e: string) => {
     setValue(e);
-  };
+  }, [value]);
 
-  const createDiary = () => {
+  const createDiary = useCallback(() => {
     setDiary([...diaries, value]);
     setValue("");
     handleClose();
-  };
+  }, [diaries, value]);
 
-  const handleClose = () => {
+  const handleClose = useCallback(() => {
     setIsVisible(!isVisible);
-  };
+  }, [isVisible]);
 
-  const handleSave = () => {
+  const handleSave = useCallback(() => {
     setIsOpen(!isOpen);
-  };
+  }, [isOpen]);
 
   return (
     <Layout>

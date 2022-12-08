@@ -1,18 +1,19 @@
 import Image from "next/image";
 import styles from "../styles/components/Qa.module.scss";
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { Question } from "../pages/index";
 
 export type QuestionProps = {
   qa: Question;
 }
 
-export const Qa: React.FC<QuestionProps> = ({qa}) => {
+// eslint-disable-next-line react/display-name
+export const Qa: React.FC<QuestionProps> = React.memo(({qa}) => {
   const [active, setActive] = useState(false);
 
-  const getToggle = () => {
+  const getToggle = useCallback(() => {
     setActive(!active);
-  };
+  }, [active]);
 
   return (
     <div className={styles.container}>
@@ -47,4 +48,4 @@ export const Qa: React.FC<QuestionProps> = ({qa}) => {
       </div>
     </div>
   );
-};
+});
