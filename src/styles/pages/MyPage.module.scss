@@ -1,1 +1,24 @@
 @import "/src/styles/variables.scss";
+
+.container {
+  margin: 140px auto 0;
+  width: 70%;
+}
+
+.statusContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.level {
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.point {
+  font-size: 32px;
+  font-weight: bold;
+  color: #FFCC66;
+}

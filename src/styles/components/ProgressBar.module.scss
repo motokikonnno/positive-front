@@ -1,0 +1,88 @@
+@import "/src/styles/variables.scss";
+
+.progressBar {
+  width: 400px;
+  height: 20px;
+  border: solid 1px #cccccc;
+  border-radius: 10px;
+
+  &.step_1 {
+    background: linear-gradient(to right, #ff1493 5%, #ffff 5% 100%);
+  }
+
+  &.step_2 {
+    background: linear-gradient(to right, #ff1493 10%, #ffff 10% 100%);
+  }
+
+  &.step_3 {
+    background: linear-gradient(to right, #ff1493 15%, #ffff 15% 100%);
+  }
+
+  &.step_4 {
+    background: linear-gradient(to right, #ff1493 20%, #ffff 20% 100%);
+  }
+
+  &.step_5 {
+    background: linear-gradient(to right, #ff1493 25%, #ffff 25% 100%);
+  }
+
+  &.step_6 {
+    background: linear-gradient(to right, #ff1493 30%, #ffff 30% 100%);
+  }
+
+  &.step_7 {
+    background: linear-gradient(to right, #ff1493 35%, #ffff 35% 100%);
+  }
+
+  &.step_8 {
+    background: linear-gradient(to right, #ff1493 40%, #ffff 40% 100%);
+  }
+
+  &.step_9 {
+    background: linear-gradient(to right, #ff1493 45%, #ffff 45% 100%);
+  }
+
+  &.step_10 {
+    background: linear-gradient(to right, #ff1493 50%, #ffff 50% 100%);
+  }
+
+  &.step_11 {
+    background: linear-gradient(to right, #ff1493 55%, #ffff 55% 100%);
+  }
+
+  &.step_12 {
+    background: linear-gradient(to right, #ff1493 60%, #ffff 60% 100%);
+  }
+
+  &.step_13 {
+    background: linear-gradient(to right, #ff1493 65%, #ffff 65% 100%);
+  }
+
+  &.step_14 {
+    background: linear-gradient(to right, #ff1493 70%, #ffff 70% 100%);
+  }
+
+  &.step_15 {
+    background: linear-gradient(to right, #ff1493 75%, #ffff 75% 100%);
+  }
+
+  &.step_16 {
+    background: linear-gradient(to right, #ff1493 80%, #ffff 80% 100%);
+  }
+
+  &.step_17 {
+    background: linear-gradient(to right, #ff1493 85%, #ffff 85% 100%);
+  }
+
+  &.step_18 {
+    background: linear-gradient(to right, #ff1493 90%, #ffff 90% 100%);
+  }
+
+  &.step_19 {
+    background: linear-gradient(to right, #ff1493 95%, #ffff 95% 100%);
+  }
+
+  &.step_20 {
+    background: #ff1493;
+  }
+}
