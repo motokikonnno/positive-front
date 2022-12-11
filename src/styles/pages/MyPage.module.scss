@@ -9,6 +9,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 90px;
   gap: 10px;
 }
 
@@ -20,5 +21,60 @@
 .point {
   font-size: 32px;
   font-weight: bold;
-  color: #FFCC66;
+  color: #ffcc66;
+}
+
+.calendarButton {
+  text-align: center;
+  margin: 40px auto 0;
+  width: 120px;
+  padding: 15px;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #ffff;
+  background-color: #ff1493;
+  white-space: nowrap;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.6;
+    filter: brightness(110%);
+    transition: all 0.3s;
+  }
+}
+
+.calendarBalloon {
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 16px;
+  background: #fff;
+  border: solid 3px #555;
+  box-sizing: border-box;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    margin-left: -15px;
+    border: 12px solid transparent;
+    border-bottom: 12px solid #fff;
+    z-index: 2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    margin-left: -17px;
+    border: 14px solid transparent;
+    border-bottom: 14px solid #555;
+    z-index: 1;
+  }
 }
