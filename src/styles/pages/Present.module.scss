@@ -18,15 +18,14 @@
 
 .InputSearchContainer {
   display: flex;
+  justify-content: space-between;
   margin-bottom: 30px;
-  // width: 45%;
 }
 
-.searchButton {
-  width: 74px;
-  height: 56px;
-  padding: 20px;
-  border-radius: 6px;
+.selectContainer {
+  flex: 0.4;
+}
+
+.select {
   background-color: #ffff;
-  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.06);
 }
