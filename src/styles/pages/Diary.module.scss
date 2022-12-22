@@ -8,12 +8,9 @@
 }
 
 .background {
-  margin: 9.9% auto 0;
-  padding: 70px;
-  width: 80%;
-  border-radius: 30px;
-  background-color: #fff0f5;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 70px 70px 30px;
+  width: 100%;
+  background-color: #FFFAFA;
 }
 
 .addButton {
@@ -36,10 +33,10 @@
   }
 }
 
-.advise {
+.help {
   display: flex;
   align-items: center;
-  margin: 4% auto 0;
+  margin: 10% auto 0;
   width: 103px;
   gap: 7px;
   font-size: 24px;
@@ -54,8 +51,8 @@
 }
 
 .textAreaContainer {
-  margin: 60px;
-  width: 500px;
+  margin: 60px auto 0;
+  width: 600px;
 }
 
 .closeIcon {
@@ -119,4 +116,9 @@
   margin-top: 10px;
   color: #ffcc66;
   font-size: 18px;
+}
+
+.diaryList {
+  margin: 0 auto;
+  width: 50%;
 }

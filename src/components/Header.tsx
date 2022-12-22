@@ -2,9 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/components/Header.module.scss";
 import React from "react";
+import { useRouter } from "next/router";
 
 // eslint-disable-next-line react/display-name
 export const Header = React.memo(() => {
+  const router = useRouter();
   return (
     <div className={styles.container}>
       <div className={styles.nav}>
@@ -13,17 +15,18 @@ export const Header = React.memo(() => {
             <Image src="/logo.png" width={50} height={50} alt="ロゴ画像" />
           </div>
         </Link>
+        {/* <div className={styles[`${isAuth ? "authInner" : "guestInner"}`]}></div> */}
         <Link href="/Diary">
-          <div className={styles.navItem}>日記を書く</div>
+          <div className={`${styles.navItem} ${styles[`${router.asPath === "/Diary" && "currentNav"}`]}`}>日記を書く</div>
         </Link>
         <Link href="/Pet">
-          <div className={styles.navItem}>ペット</div>
+          <div className={`${styles.navItem} ${styles[`${router.asPath === "/Pet" && "currentNav"}`]}`}>ペット</div>
         </Link>
         <Link href="/Present">
-          <div className={styles.navItem}>プレゼント</div>
+          <div className={`${styles.navItem} ${styles[`${router.asPath === "/Present" && "currentNav"}`]}`}>プレゼント</div>
         </Link>
         <Link href="/MyPage">
-          <div className={styles.navItem}>マイページ</div>
+          <div className={`${styles.navItem} ${styles[`${router.asPath === "/MyPage" && "currentNav"}`]}`}>マイページ</div>
         </Link>
       </div>
       <div className={styles.nav}>

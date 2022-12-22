@@ -1,4 +1,8 @@
-import { FormControl, InputLabel, MenuItem, Select, SelectChangeEvent } from "@mui/material";
+import FormControl from "@mui/material/FormControl";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import Select from "@mui/material/Select";
+import { SelectChangeEvent } from "@mui/material/Select";
 import type { NextPage } from "next";
 import { useState, useCallback } from "react";
 import { InputSearch } from "../components/InputSearch";

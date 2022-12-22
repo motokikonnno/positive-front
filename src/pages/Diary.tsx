@@ -13,9 +13,12 @@ const Diary: NextPage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleChange = useCallback((e: string) => {
-    setValue(e);
-  }, [value]);
+  const handleChange = useCallback(
+    (e: string) => {
+      setValue(e);
+    },
+    [value]
+  );
 
   const createDiary = useCallback(() => {
     setDiary([...diaries, value]);
@@ -35,69 +38,47 @@ const Diary: NextPage = () => {
     <Layout>
       <div className={styles.background}>
         <h1 className={styles.title}>ポジティブ日記</h1>
-        <div className={styles.addButton} onClick={handleClose}>
-          <Image
-            src="/icon/plus-white.svg"
-            width={30}
-            height={30}
-            alt="プラスアイコン"
-          />
+        <div className={styles.textAreaContainer}>
+          <TextArea value={value} handleChange={handleChange} />
+          <div className={styles.addButton} onClick={createDiary}>
+            追加
+          </div>
         </div>
-        {isVisible === true ? (
-          <Modal isVisible={isVisible} handleClose={handleClose}>
-            <div className={styles.closeIcon} onClick={handleClose}>
-              <Image
-                src="/icon/xmark.svg"
-                width={30}
-                height={30}
-                alt="閉じるアイコン"
-              />
-            </div>
-            <div className={styles.textAreaContainer}>
-              <TextArea value={value} handleChange={handleChange} />
-              <div className={styles.addButton} onClick={createDiary}>
-                追加
-              </div>
-            </div>
-          </Modal>
-        ) : (
-          ""
-        )}
+        <div className={styles.diaryList}>
         {diaries.map((diary) => {
           return <DiaryList diary={diary} key={diary} />;
         })}
-        {diaries.length !== 1 ? (
+        </div>
+        {diaries.length !== 1 && (
           <div className={styles.saveButton} onClick={handleSave}>
             保存
           </div>
-        ) : (
-          ""
         )}
+        <div className={styles.help}>
+          <Image
+            src="/icon/question.svg"
+            width={25}
+            height={25}
+            alt="クエッションマークの画像"
+            className={styles.questionIcon}
+          />
+          ヘルプ
+        </div>
       </div>
-      {isOpen ? (
+      {isOpen && (
         <Modal isVisible={isOpen} handleClose={handleSave}>
           <div className={styles.confirmContainer}>
             <div className={styles.saveText}>保存しますか？</div>
             <div className={styles.getPointText}>30pt獲得できます</div>
             <div className={styles.buttonContainer}>
               <div className={styles.confirmButton}>はい</div>
-              <div className={styles.confirmButton} onClick={handleSave}>戻る</div>
+              <div className={styles.confirmButton} onClick={handleSave}>
+                戻る
+              </div>
             </div>
           </div>
         </Modal>
-      ) : (
-        ""
       )}
-      <div className={styles.advise}>
-        <Image
-          src="/icon/question.svg"
-          width={25}
-          height={25}
-          alt="クエッションマークの画像"
-          className={styles.questionIcon}
-        />
-        ヘルプ
-      </div>
     </Layout>
   );
 };
